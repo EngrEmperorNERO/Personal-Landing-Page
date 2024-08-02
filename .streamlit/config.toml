@@ -1,0 +1,15 @@
+[server]
+headless = true
+
+[theme]
+#primary accent color for interactive elements
+primaryColor = "#d33682"
+
+#Background color for the main content area
+backgroundColor = "#f9f9f9"
+
+#Background color used for the sidebar 
+secondaryBackgroundColor = "#ADD8E6"
+
+#Color used for almost all text
+textColor = "#000000"
