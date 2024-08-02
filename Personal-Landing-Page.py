@@ -5,6 +5,8 @@ from PIL import Image
 #Side bar must include:
 #Contact Me
 #Portfolio
+#About me - Contains: Background Education, Type of Person, Hobbies, 
+#Remove the Social Media -- Add Icons probably/
 
 # Path settings
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
@@ -24,9 +26,12 @@ I also have working knowledge with tools such as Power BI, Salesforce, Python, S
 If you're looking for a data analyst who can turn raw data into actionable insights, streamline reporting processes, optimize and improve businesses, I'd love to connect. Let's collaborate and make data-driven decisions that propel your organization forward.
 """
 EMAIL = "engr.marvinbaesa01@gmail.com"
+
 SOCIAL_MEDIA = {
-    "Github": "https://github.com/EngrEmperorNERO"
+    "Github": "https://github.com/EngrEmperorNERO",
+    "Facebook": "https://www.facebook.com/profile.php?id=61558530302315"
 }
+
 
 # Ensure set_page_config is called once and at the start
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout="wide")
@@ -52,13 +57,13 @@ with col2:
         file_name=resume_file.name,
         mime="application/octet-stream",
     )
-    st.write(EMAIL)
+#    st.write(EMAIL)
 
 # Social Links:
-st.write("#")
-cols = st.columns(len(SOCIAL_MEDIA))
-for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
-    cols[index].write(f"[{platform}]({link})")
+#st.write("#")
+#cols = st.columns(len(SOCIAL_MEDIA))
+#for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
+# cols[index].write(f"[{platform}]({link})")
 
 # Experience and Qualifications
 st.write("#")
@@ -74,13 +79,23 @@ st.write(
 
 # Skills
 st.write("#")
-st.subheader("Hard Skills: ")
+st.subheader("Relevant Skills: ")
 st.write(
     """
     - 👨‍💻 Programming: Python (Pandas, Openpyxl, Numpy, Matplotlib, Selenium, Streamlit, BeautifulSoup)
     - 📊 Data Visualization: Power BI, MS Excel, Google Sheet, and Tableau
     - 🗃️ Data Processing: Data cleaning, Data transformation, Data wrangling, and Data modeling
     - 💻 Database: MySQL and PostgreSQL
+    - 💻 KPI Development
+    - 💻 Reports Generation / Automation
+    - 💻 Salesforce
+    - 💻 Advance Working Knowledge in Spreadsheet(Excel, Google Sheet)
+    - 💻 Data Collection (Web Scraping, Automation in Data Entry, API)
+    - 💻 Data pipelines development 
+    - 💻 Data Mapping
+    - 💻 Data Processing (Data transformation, Data Cleaning, Data wrangling)
+    - 💻 Processing Data (Data transformation, Data Cleaning, Data wrangling)
+    - 💻 Data Analysis (Descriptive, Predictive, Diagnostic, Exploratory, Regression)
     """
 )
 
@@ -199,23 +214,18 @@ for cert in certifications:
 
 
 # Sidebar content
-st.sidebar.header("Relevant Skills")
+#st.sidebar.header("Relevant Skills")
 skills = [
-    "SQL", "Python", "Web scraping", "Data Modelling", "Experienced in API",
-    "Data Mapping", "Database Design", "Data Cleaning", "Data Transformation",
-    "Data wrangling", "Data Analysis", "Development of Data Pipelines", "Tableau",
-    "Power BI", "Salesforce", "Advance working knowledge in Excel / Google Sheet",
-    "MS Access", "KPI Development", "Reports Automation / Generation", "Shopify",
-    "Data Entry", "Github"
+    "About Me", "Portfolio", "Connect with Me"
 ]
 
 for skill in skills:
     st.sidebar.write(f"- {skill}")
 
-st.sidebar.header("Educational Background")
-st.sidebar.write("**BACHELOR OF SCIENCE IN INDUSTRIAL ENGINEERING**")
-st.sidebar.write("National College of Science and Technology")
-st.sidebar.write("2015-2020")
+#st.sidebar.header("Educational Background")
+#st.sidebar.write("**BACHELOR OF SCIENCE IN INDUSTRIAL ENGINEERING**")
+#st.sidebar.write("National College of Science and Technology")
+#st.sidebar.write("2015-2020")
 # Ensure there are no additional calls to set_page_config
 #if __name__ == "__main__":
 #    st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
